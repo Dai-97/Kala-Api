@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="21056" it="0" lt="0" ct="21056" ts="1724634084232" s="false" lb="login" rc="Non HTTP response code: org.apache.http.conn.HttpHostConnectException" rm="Non HTTP response message: Connect to 172.23.244.167:80 [/172.23.244.167] failed: Connection timed out: connect" tn="login 线程组 1-1" dt="text" de="UTF-8" by="2606" sby="0" sc="1" ec="1" ng="1" na="1" hn="DESKTOP-AKOJ30B">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Host: 172.23.244.167
+Pragma: no-cache
+Referer: http://172.23.244.167/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+Fawkes-Auth: 1
+Content-Length: 85
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+</requestHeader>
+  <responseData class="java.lang.String">org.apache.http.conn.HttpHostConnectException: Connect to 172.23.244.167:80 [/172.23.244.167] failed: Connection timed out: connect&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:409)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:940)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:651)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1311)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1300)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:842)&#xd;
+Caused by: java.net.ConnectException: Connection timed out: connect&#xd;
+	at java.base/sun.nio.ch.Net.connect0(Native Method)&#xd;
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)&#xd;
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)&#xd;
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)&#xd;
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)&#xd;
+	at java.base/java.net.Socket.connect(Socket.java:633)&#xd;
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)&#xd;
+	... 19 more&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">fawkes-session-n=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImZhd2tlcyIsInVzZXJfbmFtZSI6Im1mIiwic2V4Ijoi55S3IiwidXNlck5vIjpudWxsLCJ1c2VyTmFtZSI6Im1mIiwiY2xpZW50X2lkIjoiZmF3a2VzIiwiYXZhdGFyVG9rZW4iOm51bGwsImxpY2Vuc2UiOiJwb3dlcmVkIGJ5IGZhd2tlcyIsImF1ZCI6WyJvYXV0aDItcmVzb3VyY2UiLCJvYXV0aDItc2VydmVyIl0sInBob25lIjpudWxsLCJzY29wZSI6WyJhbGwiXSwidGVuYW50SWQiOjEwMDAwMCwidXNlckZ1bGxuYW1lIjpudWxsLCJpZCI6IjE2NjA0NTYyNTczNDI5MzUwNDEiLCJ1c2VyVHlwZSI6MSwiZXhwIjoxNzE4MzY0MzMzLCJqdGkiOiJjOWE0Y2Y4My02NGNlLTRkY2YtYTUzNy04YmMwNTkxMDg0NzgiLCJlbWFpbCI6bnVsbH0.NuMe9mdhSnjiBlBi-AzpooC8n1YxIoYuK63XVCNg-Hw</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">scope=all&amp;grant_type=password&amp;username=wei_jt&amp;password=JroVJLQ0OJlGZoJQw%2BXwvQ%3D%3D</queryString>
+  <java.net.URL>http://172.23.244.167/api/sys-sso/oauth2/login?sign=%2Fs8ByhU2X8TBt9g2Cy8gluo7Yxs%3D&amp;ts=1724634084&amp;ttl=180&amp;uid=fawkes</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1724634105328" s="true" lb="BeanShell 取样器 定义全局accessToken" rc="200" rm="OK" tn="login 线程组 1-1" dt="text" de="" by="0" sby="0" sc="1" ec="0" ng="1" na="1" hn="DESKTOP-AKOJ30B">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String"></responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">
+//设定全局</samplerData>
+</sample>
+<httpSample t="21040" it="0" lt="0" ct="21040" ts="1724634105337" s="false" lb="page?flowCode=&amp;fileCode=&amp;fileName=&amp;fileType=&amp;processState=1&amp;ifExistAchievement=1&amp;createDateEnd=&amp;createDateStart=&amp;userFullname=&amp;fileLevel=&amp;supervisionAccruCheckDate=&amp;supervisionFirstCheckDate=&amp;flowDurationDate=&amp;projectPartName=&amp;version=&amp;subject=&amp;page=1&amp;size=20" rc="Non HTTP response code: org.apache.http.conn.HttpHostConnectException" rm="Non HTTP response message: Connect to 172.23.244.167:80 [/172.23.244.167] failed: Connection timed out: connect" tn="设计管理 3-1" dt="text" de="" by="2606" sby="0" sc="1" ec="1" ng="1" na="1" hn="DESKTOP-AKOJ30B">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cache-Control: no-cache
+Connection: keep-alive
+Host: 172.23.244.167
+Pragma: no-cache
+Referer: http://172.23.244.167/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+Fawkes-Auth: null
+</requestHeader>
+  <responseData class="java.lang.String">org.apache.http.conn.HttpHostConnectException: Connect to 172.23.244.167:80 [/172.23.244.167] failed: Connection timed out: connect&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:409)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:940)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:651)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1311)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1300)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)&#xd;
+	at java.base/java.lang.Thread.run(Thread.java:842)&#xd;
+Caused by: java.net.ConnectException: Connection timed out: connect&#xd;
+	at java.base/sun.nio.ch.Net.connect0(Native Method)&#xd;
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)&#xd;
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)&#xd;
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)&#xd;
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)&#xd;
+	at java.base/java.net.Socket.connect(Socket.java:633)&#xd;
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)&#xd;
+	... 19 more&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">fawkes-session-n=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImZhd2tlcyIsInVzZXJfbmFtZSI6Im1mIiwic2V4Ijoi55S3IiwidXNlck5vIjpudWxsLCJ1c2VyTmFtZSI6Im1mIiwiY2xpZW50X2lkIjoiZmF3a2VzIiwiYXZhdGFyVG9rZW4iOm51bGwsImxpY2Vuc2UiOiJwb3dlcmVkIGJ5IGZhd2tlcyIsImF1ZCI6WyJvYXV0aDItcmVzb3VyY2UiLCJvYXV0aDItc2VydmVyIl0sInBob25lIjpudWxsLCJzY29wZSI6WyJhbGwiXSwidGVuYW50SWQiOjEwMDAwMCwidXNlckZ1bGxuYW1lIjpudWxsLCJpZCI6IjE2NjA0NTYyNTczNDI5MzUwNDEiLCJ1c2VyVHlwZSI6MSwiZXhwIjoxNzE4MzY0MzMzLCJqdGkiOiJjOWE0Y2Y4My02NGNlLTRkY2YtYTUzNy04YmMwNTkxMDg0NzgiLCJlbWFpbCI6bnVsbH0.NuMe9mdhSnjiBlBi-AzpooC8n1YxIoYuK63XVCNg-Hw</cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://172.23.244.167/api/design-management-service/designReview/page?flowCode=&amp;fileCode=&amp;fileName=&amp;fileType=&amp;processState=1&amp;ifExistAchievement=1&amp;createDateEnd=&amp;createDateStart=&amp;userFullname=&amp;fileLevel=&amp;supervisionAccruCheckDate=&amp;supervisionFirstCheckDate=&amp;flowDurationDate=&amp;projectPartName=&amp;version=&amp;subject=&amp;page=1&amp;size=20</java.net.URL>
+</httpSample>
